@@ -46,9 +46,6 @@ def calculate_trip_cost(ticket_price: int, hotel_price_per_night: int, nights: i
 
 
 if __name__ == "__main__":
-    # Локальное подключение: MCP-клиент сам запускает этот процесс через stdio.
-    # Для Streamable HTTP замените строку ниже на:
-    # mcp.run(transport="http", host="127.0.0.1", port=8001)
-    # Затем запустите файл отдельно: python mcp_flights_server.py
+    # Запустите файл отдельно: python mcp_flights_server.py
     # Клиент подключается к URL http://127.0.0.1:8001/mcp.
-    mcp.run(transport="stdio")
+    mcp.run(transport="http", host="127.0.0.1", port=8001)
